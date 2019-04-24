@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js"></script>
+	<link rel="icon" href="icon.png">
     <title>Treasure Chest</title>
 </head>
 <body>
