@@ -12,16 +12,23 @@ function winCount(){
         if(snapshot.hasChild('counter')){
             checkWin.once("value", snapshot => {
                 var counterJs = snapshot.child("counter").val();
+                
                 if(counterJs >= 3){
                     console.log("Yang menang sudah 3 orang!");
                     document.getElementById("gif").src = "gagal.gif";
                     setTimeout(setTextZonk, 1200);
                 }else{
+                    var ipAdd;
                     counterJs += 1;
                     console.log(counterJs);
-                    database.ref('win').set({
-                        counter: counterJs
+                    $.getJSON("https://jsonip.com?callback=?", function(data) {
+                        // alert("Your IP address is :- " + data.ip);
+                        database.ref('win').set({
+                            counter: counterJs,
+                            ip: data.ip
+                        });
                     });
+                   
                     document.getElementById("gif").src = 'win.gif';
                     setTimeout(setTextWin, 1200);
                 }
@@ -30,6 +37,12 @@ function winCount(){
         
     })
 }
+
+// var getIPAddress = function() {
+//     $.getJSON("https://jsonip.com?callback=?", function(data) {
+//       alert("Your IP address is :- " + data.ip);
+//     });
+// };
 
 function setTextWin(){
     document.getElementById("editText").innerHTML = "Selamat anda mendapatkan Grand Prize!!!";
