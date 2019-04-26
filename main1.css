@@ -12,7 +12,7 @@ body{
     justify-content: center;
 }
 
-p{
+#editText{
     margin-top: 30px;
     text-align: center;
     display: block;
