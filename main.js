@@ -21,13 +21,13 @@ function winCount(){
                     var ipAdd;
                     counterJs += 1;
                     console.log(counterJs);
-                    $.getJSON("https://jsonip.com?callback=?", function(data) {
+                    // $.getJSON("https://jsonip.com?callback=?", function(data) {
                         // alert("Your IP address is :- " + data.ip);
                         database.ref('win').set({
                             counter: counterJs,
-                            ip: data.ip
+                            // ip: data.ip
                         });
-                    });
+                    // });
                    
                     document.getElementById("gif").src = 'win.gif';
                     setTimeout(setTextWin, 1200);

@@ -18,7 +18,7 @@
     };
     firebase.initializeApp(config);
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script> -->
     <script src="main.js"></script>
     <title>Treasure Chest</title>
 </head>
